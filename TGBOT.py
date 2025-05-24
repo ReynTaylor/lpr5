@@ -130,6 +130,8 @@ def send_lampochka_location(message):
 
 @bot.message_handler(func=lambda message: message.text == '👥 Создатели')
 def developers_comand(message):
+    gif_url = 'https://i.postimg.cc/W3Qp4gy9/0524.gif'
+    bot.send_animation(message.chat.id, gif_url)
     bot.send_message(message.chat.id, '''Создателями бота являются:
 Савушкин Григорий Данилович
 Пожидаев Роман Дмитриевич
