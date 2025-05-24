@@ -77,10 +77,10 @@ def send_weather(message):
             bot.send_message(message.chat.id, 'Город не найден или ошибка API.')
             return
 
-temperature = data['main']['temp']
+        temperature = data['main']['temp']
         weather_description = data['weather'][0]['description']
         bot.send_message(message.chat.id,
-                        f'{user_data[message.chat.id]['name']}, погода в {city}е:\nТемпература: {temperature}°C\nОписание: {weather_description}')
+                        f'{user_data[message.chat.id]["name"]}, погода в {city}е:\nТемпература: {temperature}°C\nОписание: {weather_description}')
     except Exception as e:
         bot.send_message(message.chat.id, 'Произошла ошибка при получении данных о погоде.')
 
